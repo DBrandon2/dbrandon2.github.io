@@ -1,0 +1,93 @@
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @layer components {
+      .btn-primary {
+        @apply relative overflow-hidden font-medium tracking-wide py-3 px-6 rounded-lg transition-all duration-300 ease-in-out;
+        background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+        color: white;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+      }
+      .btn-primary:hover {
+        @apply transform -translate-y-1 shadow-lg;
+        box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+      }
+      .btn-primary:active {
+        @apply transform translate-y-0;
+      }
+
+      .btn-secondary {
+        @apply relative overflow-hidden text-gray-100 border-2 border-indigo-400 py-3 px-6 rounded-lg transition-all duration-300 ease-in-out;
+        background: transparent;
+      }
+      .btn-secondary:hover {
+        @apply border-indigo-500 text-indigo-400 transform -translate-y-1 shadow-lg;
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+      }
+      .btn-secondary:active {
+        @apply transform translate-y-0;
+      }
+
+      .nav-link {
+        @apply relative text-gray-400 text-sm font-medium tracking-tight py-2 px-3 transition-all duration-300 ease-in-out inline-block;
+      }
+      .nav-link::before {
+        content: "";
+        @apply absolute bottom-0 left-1/2 w-0 h-0.5;
+        background: linear-gradient(90deg, #6366f1, #818cf8);
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+      }
+      .nav-link:hover {
+        @apply text-indigo-400;
+      }
+      .nav-link:hover::before {
+        @apply w-full;
+      }
+
+      .project-link {
+        @apply relative text-indigo-400 font-medium transition-all duration-300 ease-in-out inline-block;
+      }
+      .project-link::after {
+        content: "";
+        @apply absolute bottom-0 left-0 w-full h-0.5;
+        background: linear-gradient(90deg, #6366f1, #818cf8);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out;
+      }
+      .project-link:hover {
+        @apply text-indigo-300;
+      }
+      .project-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      #backToTop {
+        /* Base styles, will be overridden by JS for opacity */
+        opacity: 0;
+        pointer-events: none;
+        padding: 1rem; /* p-4 */
+        background-color: rgba(255, 255, 255, 0.1); /* bg-white/10 */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* border-white/20 */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+      }
+
+      #backToTop svg {
+        color: #d1d5db; /* text-gray-300 */
+      }
+    }
+
+    /* Focus states for accessibility */
+    a:focus,
+    button:focus {
+      outline: 2px solid #6366f1;
+      outline-offset: 2px;
+    }
+    

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Brandon — Développeur Web Full Stack</title>
+    <meta
+      name="description"
+      content="Portfolio de Brandon, développeur web full stack. Applications performantes, modernes et évolutives."
+    />
+    <meta name="author" content="Brandon" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Brandon — Développeur Web Full Stack" />
+    <meta
+      property="og:description"
+      content="Portfolio de développeur web full stack"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+
+    <!-- Tippy core -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <!-- Style par défaut -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-gray-950 text-gray-100 font-sans scroll-smooth">
+    <!-- HEADER -->
+    <header
+      class="fixed top-0 w-full bg-gray-950/80 backdrop-blur border-b border-gray-800 z-50"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#hero" class="nav-link font-bold text-2xl">Demaretz Brandon</a>
+
+        <button id="menuBtn" class="md:hidden text-xl">☰</button>
+
+        <ul id="menu" class="hidden md:flex gap-6 text-sm">
+          <li><a href="#about" class="nav-link">À propos</a></li>
+          <li><a href="#skills" class="nav-link">Compétences</a></li>
+          <li><a href="#projects" class="nav-link">Projets</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center text-center px-6 relative"
+    >
+      <div id="tsparticles"></div>
+
+      <div class="relative z-10">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Demaretz Brandon</h1>
+        <h2 class="text-5xl md:text-6xl font-bold mb-6">
+          Développeur Web <span class="text-indigo-400">Full Stack</span>
+        </h2>
+
+        <p class="max-w-xl mx-auto text-gray-400 mb-8">
+          Je crée des applications web performantes et évolutives, avec une
+          attention particulière à la qualité du code et à l’expérience
+          utilisateur.
+        </p>
+
+        <div class="flex justify-center gap-4 flex-wrap">
+          <a href="#projects" class="btn-secondary"> Voir mes projets </a>
+
+          <a
+            href="/public/CV Demaretz Brandon.pdf"
+            download
+            class="btn-secondary flex items-center gap-2"
+            aria-label="Télécharger le CV de Brandon Demaretz"
+          >
+            📄 Télécharger mon CV
+          </a>
+
+          <a href="#contact" class="btn-primary"> Me contacter </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">À propos</h2>
+      <p class="text-gray-400 leading-relaxed">
+        Développeur web full stack passionné, j’interviens sur l’ensemble du
+        cycle de vie d’une application : analyse, conception, développement et
+        déploiement. J’accorde une grande importance à la performance, à la
+        maintenabilité et à l’expérience utilisateur.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-gray-900">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Compétences</h2>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm">
+          <div class="skill-card">
+            <h4 class="font-semibold mb-2">Frontend</h4>
+            HTML • CSS • Tailwind • React • JavaScript
+          </div>
+
+          <div class="skill-card">
+            <h4 class="font-semibold mb-2">Backend</h4>
+            Node.js • Express • API REST • Authentification
+          </div>
+
+          <div class="skill-card">
+            <h4 class="font-semibold mb-2">Base de données</h4>
+            MongoDB • SQL • Firebase
+          </div>
+
+          <div class="skill-card">
+            <h4 class="font-semibold mb-2">Outils</h4>
+            Git • GitHub • Docker • CI/CD
+          </div>
+
+          <div class="skill-card">
+            <h4 class="font-semibold mb-2">Soft skills</h4>
+            Communication • Travail en équipe • Curiosité
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Projets</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+          <!-- Projet 1 -->
+          <article
+            class="project-card border border-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
+          >
+            <!-- Titre cliquable -->
+            <h3 class="font-semibold text-xl mb-4 px-1 pt-4">
+              <a
+                href="https://web-com-ink.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-white transition-colors flex justify-between text-2xl"
+              >
+                WebComInk
+                <span
+                  class="warning-icon"
+                  data-tippy-content="Le premier chargement peut prendre quelques minutes."
+                  aria-label="Information de chargement"
+                >
+                  <i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="color: #ffd43b"
+                  ></i>
+                </span>
+              </a>
+            </h3>
+
+            <!-- Image preview cliquable -->
+            <a
+              href="https://web-com-ink.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block group"
+            >
+              <img
+                src="images/WebComInk Preview.png"
+                alt="Prévisualisation WebComInk"
+                class="w-full h-80 object-cover transition-all duration-300 border border-transparent group-hover:border-gray-800 rounded-t-xl"
+              />
+            </a>
+
+            <div class="p-6 space-y-4">
+              <!-- Description -->
+              <p class="text-gray-300 text-sm">
+                Application de lecture de scans de mangas en ligne s’appuyant
+                sur l’API MangaDex. Elle propose une interface moderne et
+                intuitive, permettant de naviguer facilement entre les œuvres et
+                de lire les chapitres confortablement. L’utilisateur peut
+                également créer une bibliothèque personnalisable afin de trier
+                les mangas lus ou à lire selon ses préférences.
+              </p>
+              <span class="text-gray-500 text-sm"
+                >(Voir la page Notion pour la conception détaillée.)</span
+              >
+              <ul class="text-gray-400 text-sm">
+                <li>- Tri & filtres avancés</li>
+                <li>- Création de bibliothèque personnalisable</li>
+                <li>- Historique de lecture</li>
+                <li>- Catégorisation par genre</li>
+                <li>- Performance optimisée</li>
+                <li>- ...</li>
+              </ul>
+
+              <!-- Technologies -->
+              <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >MongoDB</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Express</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >React</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Tailwind CSS</span
+                >
+              </div>
+
+              <!-- Liens -->
+              <div class="flex gap-6 text-sm mt-2">
+                <a
+                  href="https://web-com-ink.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >Démo</a
+                >
+                <a
+                  href="https://github.com/DBrandon2/WebComInk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >GitHub</a
+                >
+                <a
+                  href="https://www.notion.so/WebComInk-Project-1ee01d0f52bf80f7a8c5f1bc7d542c88"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >Notion</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article
+            class="project-card border border-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
+          >
+            <!-- Titre cliquable -->
+            <h3 class="font-semibold text-xl mb-4 px-4 pt-4">
+              Guardian Ange Tech
+            </h3>
+
+            <!-- Image preview cliquable -->
+
+            <img
+              src="images/Guardian Preview.png"
+              alt="Prévisualisation Portfolio"
+              class="w-full h-80 object-cover transition-all duration-300 border border-transparent group-hover:border-gray-800 rounded-t-xl"
+            />
+
+            <div class="p-6 space-y-4">
+              <!-- Description -->
+              <p class="text-gray-300 text-sm">
+                Application web et mobile destinée à accompagner les personnes
+                atteintes de la maladie d’Alzheimer ainsi que leurs aidants.
+                Développée en équipe de 4, elle propose différents outils et
+                fonctionnalités visant à faciliter le quotidien des
+                utilisateurs. La conception et le développement du projet ont
+                été menés selon la méthodologie Agile Scrum.
+              </p>
+
+              <ul class="text-gray-400 text-sm">
+                <li>- Accompagnement des personnes atteintes d’Alzheimer</li>
+                <li>- Fonctionnalités d’aide-mémoire, rendez-vous et suivi</li>
+                <li>
+                  - Interface intuitive pour des utilisateurs souffrant de
+                  troubles cognitifs
+                </li>
+                <li>- Développement multiplateforme web et mobile</li>
+                <li>
+                  - Synchronisation des données entre aidés et aidants en temps
+                  réel
+                </li>
+                <li>
+                  - Sécurisation et confidentialité des données médicales
+                  sensibles
+                </li>
+                <li>- ...</li>
+              </ul>
+
+              <!-- Technologies -->
+              <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >MongoDB</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Express</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >React</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >React Native</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >TypeScript</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Scrum</span
+                >
+              </div>
+
+              <!-- Liens -->
+              <div class="flex gap-6 text-sm mt-2">
+                <a href="#" class="text-red-500"
+                  ><i class="fa-solid fa-ban"></i> Application Hors ligne</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article
+            class="project-card border border-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
+          >
+            <!-- Titre cliquable -->
+            <h3 class="font-semibold text-xl mb-4 px-4 pt-4">Bucket List</h3>
+
+            <!-- Image preview cliquable -->
+
+            <img
+              src="images/Bucket Preview.png"
+              alt="Prévisualisation Portfolio"
+              class="w-full h-80 object-cover transition-all duration-300 border border-transparent group-hover:border-gray-800 rounded-t-xl"
+            />
+
+            <div class="p-6 space-y-4">
+              <!-- Description -->
+              <p class="text-gray-300 text-sm">
+                Application web responsive de type “Bucket List” permettant aux
+                utilisateurs de créer, gérer et suivre des défis personnels à
+                accomplir. Le projet vise à proposer un outil innovant
+                favorisant l’engagement et la création d’une communauté autour
+                d’objectifs personnels. Développée en équipe de 4, l’application
+                intègre des fonctionnalités telles que la gestion de listes, des
+                rappels intelligents, des statistiques visuelles et des éléments
+                de gamification. La conception et le développement ont été
+                réalisés selon la méthodologie Agile Scrum, avec une attention
+                particulière portée à l’expérience utilisateur, à la
+                performance, à la sécurité et à la conformité RGPD.
+              </p>
+
+              <ul class="text-gray-400 text-sm">
+                <li>
+                  - Création et gestion intuitive de Bucket Lists personnalisées
+                </li>
+                <li>
+                  - Système de rappels et notifications intelligentes pour
+                  encourager l’accomplissement des objectifs
+                </li>
+                <li>
+                  - Album souvenir avec intégration de photos et vidéos des
+                  défis réalisés
+                </li>
+                <li>
+                  - Carte du monde interactive pour visualiser les objectifs par
+                  pays et découvrir des défis populaires
+                </li>
+                <li>
+                  - Gamification avec récompenses, badges et monnaie virtuelle
+                </li>
+                <li>
+                  - Panel administrateur pour la gestion des contenus,
+                  événements et statistiques globales
+                </li>
+                <li>- ...</li>
+              </ul>
+
+              <!-- Technologies -->
+              <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >MongoDB</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Express</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >React</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-gray-800 px-2 py-1 rounded transition-transform duration-200 ease-out hover:scale-110 cursor-default"
+                  >Tailwind CSS</span
+                >
+              </div>
+
+              <!-- Liens -->
+              <div class="flex gap-6 text-sm mt-2">
+                <a href="#" class="text-red-500"
+                  ><i class="fa-solid fa-ban"></i> Application Hors ligne</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-gray-900 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">Contact</h2>
+        <p class="text-gray-400 mb-6">
+          Une opportunité, un projet ou simplement une question ?
+        </p>
+        <a href="mailto:demaretzz.brandon@gmail.com" class="email-link">
+          demaretzz.brandon@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="py-8 text-center text-gray-500 text-sm border-t border-gray-800"
+    >
+      © 2026 — Demaretz Brandon • Tous droits réservés.
+    </footer>
+
+    <script>
+      tippy(".warning-icon", {
+        placement: "top",
+        animation: "shift-away",
+        theme: "custom-dark",
+        duration: [150, 150],
+        arrow: true,
+      });
+    </script>
+  </body>
+</html>
